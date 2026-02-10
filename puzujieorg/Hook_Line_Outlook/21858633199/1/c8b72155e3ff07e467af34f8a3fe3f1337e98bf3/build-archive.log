@@ -1,0 +1,69 @@
+Command line invocation:
+    /Applications/Xcode_16.4.app/Contents/Developer/usr/bin/xcodebuild archive -workspace ./Hook_Line_Outlook.xcworkspace -scheme Hook_Line_Outlook -configuration Release -destination generic/platform=iOS -archivePath /Users/runner/work/Hook_Line_Outlook/Hook_Line_Outlook/build.xcarchive
+
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (6 targets)
+    Target 'Hook_Line_Outlook' in project 'Hook_Line_Outlook'
+        ➜ Implicit dependency on target 'Pods-Hook_Line_Outlook' in project 'Pods' via file 'Pods_Hook_Line_Outlook.framework' in build phase 'Link Binary'
+        ➜ Implicit dependency on target 'LHLSubscription' in project 'Pods' via options '-framework LHLSubscription' in build setting 'OTHER_LDFLAGS'
+    Target 'Pods-Hook_Line_Outlook' in project 'Pods'
+        ➜ Explicit dependency on target 'LHLSubscription' in project 'Pods'
+        ➜ Explicit dependency on target 'UMAPM' in project 'Pods'
+        ➜ Explicit dependency on target 'UMCommon' in project 'Pods'
+        ➜ Explicit dependency on target 'UMDevice' in project 'Pods'
+    Target 'LHLSubscription' in project 'Pods'
+        ➜ Explicit dependency on target 'UMAPM' in project 'Pods'
+        ➜ Explicit dependency on target 'UMCommon' in project 'Pods'
+        ➜ Explicit dependency on target 'UMDevice' in project 'Pods'
+    Target 'UMAPM' in project 'Pods'
+        ➜ Explicit dependency on target 'UMCommon' in project 'Pods'
+    Target 'UMCommon' in project 'Pods'
+        ➜ Explicit dependency on target 'UMDevice' in project 'Pods'
+    Target 'UMDevice' in project 'Pods' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -arch arm64 -isysroot /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk -x objective-c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/usr/bin/actool --print-asset-tag-combinations --output-format xml1 /Users/runner/work/Hook_Line_Outlook/Hook_Line_Outlook/Hook_Line_Outlook/Resources/Assets.xcassets
+
+ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -V
+
+ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/usr/bin/actool --version --output-format xml1
+
+ExecuteExternalTool /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+Build description signature: 8188956ed0fa835da3c997d1168dc096
+Build description path: /Users/runner/Library/Developer/Xcode/DerivedData/Hook_Line_Outlook-bcarkjbgxlfdinbdxiiscreizobr/Build/Intermediates.noindex/ArchiveIntermediates/Hook_Line_Outlook/IntermediateBuildFilesPath/XCBuildData/8188956ed0fa835da3c997d1168dc096.xcbuilddata
+note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'UMAPM' from project 'Pods')
+note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'UMCommon' from project 'Pods')
+/Users/runner/work/Hook_Line_Outlook/Hook_Line_Outlook/Hook_Line_Outlook.xcodeproj: error: "Hook_Line_Outlook" requires a provisioning profile with the WeatherKit feature. Select a provisioning profile in the Signing & Capabilities editor. (in target 'Hook_Line_Outlook' from project 'Hook_Line_Outlook')
+note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'Hook_Line_Outlook' from project 'Hook_Line_Outlook')
+note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'Pods-Hook_Line_Outlook' from project 'Pods')
+note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'UMDevice' from project 'Pods')
+note: Disabling previews because SWIFT_VERSION is set and SWIFT_OPTIMIZATION_LEVEL=-O, expected -Onone (in target 'LHLSubscription' from project 'Pods')
+** ARCHIVE FAILED **
+
+
+The following build commands failed:
+	Archiving workspace Hook_Line_Outlook with scheme Hook_Line_Outlook
+(1 failure)
